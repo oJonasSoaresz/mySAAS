@@ -1,0 +1,7 @@
+{
+  "name": "meu-saas",
+  "version": "1.0.0",
+  "dependencies": {
+    "resend": "latest"
+  }
+}
