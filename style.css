@@ -158,3 +158,40 @@
 	color: #2165DF;
 	cursor: pointer;
 }
+
+
+.codigo-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.codigo-digito {
+    width: 45px;
+    height: 55px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #E8E8E8;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+    transition: 0.2s;
+}
+
+.codigo-digito:focus {
+    border-color: #225AC0;
+    outline: none;
+}
+
+.btn-continuar {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #225AC0;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
