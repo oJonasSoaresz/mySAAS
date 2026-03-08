@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       from: 'onboarding@resend.dev', // Lembre-se: use seu domínio verificado aqui depois
       to: email,
       subject: 'Seu código de acesso Linkei',
-      html: `<p>Olá! Seu código de acesso é: <strong>${codigo}</strong></p>`
+      html: `<p>Olá! Seu código de acesso é: <strong></strong></p>`
     });
 
     return res.status(200).json({ message: 'Código enviado com sucesso!' });
@@ -21,3 +21,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: error.message });
   }
 }
+
