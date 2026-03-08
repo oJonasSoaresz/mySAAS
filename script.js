@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     btn.disabled = true;
 
     try {
-        const response = await fetch('/api/enviar-email', {
+        const response = await fetch('enviar-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email })
@@ -30,4 +30,5 @@ form.addEventListener('submit', async (e) => {
         btn.innerText = 'CONTINUAR';
         btn.disabled = false;
     }
+
 });
