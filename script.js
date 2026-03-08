@@ -16,13 +16,17 @@ form.addEventListener('submit', async (e) => {
         });
 
         if (response.ok) {
-            alert('Código enviado! Verifique sua caixa de entrada.');
+            // A mágica acontece aqui:
+            // Ao invés de um alerta, redirecionamos o usuário
+            window.location.href = 'verificacao.html';
         } else {
             alert('Erro ao enviar. Verifique se o e-mail é o mesmo da sua conta Resend.');
         }
     } catch (err) {
         alert('Erro de conexão.');
     } finally {
+        // Se deu erro, reativamos o botão. Se deu sucesso, 
+        // o navegador já estará mudando de página.
         btn.innerText = 'CONTINUAR';
         btn.disabled = false;
     }
