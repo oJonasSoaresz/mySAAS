@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+
+}
+
+.container-principal{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100vh;
+}
+
+.lado-esquerdo{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lado-direito{
+	flex: 1;
+	background-image: url('unnamed.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.quadro-informação{
+}
+
+#txt-familia-linkei{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#desc{
+	text-align: center;	
+	margin-bottom: 50px;
+	font-size: 14px;
+	color: #747474;
+}
+
+#cadastrar{
+	display: flex;
+	flex-direction: column;
+}
+
+#email{
+	background-color: #E8E8E8;
+	border-radius: 12px;
+	padding: 17px;
+	border: 2px solid transparent;
+	margin-bottom: 30px;
+	transition: 0.2s;
+}
+
+#email:hover{
+	border-color: #A5A5A5;
+}
+
+#email:focus{
+	border-color: #225AC0;
+	outline: none;
+}
+
+#continuar{
+	width: 100%;
+	padding: 16px 154px 16px 154px;
+	border: none;
+	border-radius: 12px;
+	background-color: #225AC0;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	transition: 0.2s;
+}
+
+#continuar:disabled{
+	background-color: #cccccc;
+	cursor: default;
+	opacity: 0.7;
+}
+
+
+#continuar:hover:enabled{
+	background-color: #2165DF;
+}
+
+
+#info-cadastro{
+	text-align: center;
+	font-size: 12px;
+	color: #747474;
+	margin-bottom: 20px;
+}
+
+
+
+#ou{
+	text-align: center;
+	font-size: 12px;
+	color: #747474;
+	margin-bottom: 20px;
+}
+
+.btn-google {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px; /* Espaço entre o logo e o texto */
+	background-color: white;
+	border: 1px solid #CDCDCD;
+	border-radius: 12px;     
+	padding: 12px 24px;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	color: #3c4043;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	margin-bottom: 15px;
+}
+
+.btn-google:hover {
+	background-color: #f8f9fa;
+}
+
+.btn-google img {
+	width: 20px;
+	height: 20px;
+}
+
+.tem-conta{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	gap: 5px;
+}
+
+#txt-tem-conta{
+	font-size: 12px;
+	color: #747474;
+}
+
+#entrar{
+	font-size: 12px;
+	color: #225AC0;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+#entrar:hover{
+	color: #2165DF;
+	cursor: pointer;
+}

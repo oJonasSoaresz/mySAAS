@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - Meu Micro-SaaS</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<main class="container-principal">
+	<section class="lado-esquerdo">
+		<div class="quadro-informação">
+			<h1 id="txt-familia-linkei">logadooooooo<br>Linkei</h1>
+			<p id="desc">Crie sua conta por aqui.</p>
+
+			<form id="cadastrar">
+				<input type="email" id="email" placeholder="Email" required>
+				<button type="submit">CONTINUAR</button>
+			</form>
+
+			<p id="info-cadastro">Se você clicar em <b>CONTINUAR</b>, você estará aceitando<br>com os termos e condições do Linkei.</p>
+			<p id="ou">OU</p>
+			<button class="btn-google"> <img src="google-logo.png" alt="Google logo"> Continue com o Google</button>
+
+			<div class="tem-conta">
+				<p id="txt-tem-conta">Já tem uma conta?</p>
+				<a id="entrar" href="#">Entrar</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="lado-direito">
+	</section>
+	</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
