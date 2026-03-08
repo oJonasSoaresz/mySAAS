@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   try {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev', // Nota: use seu domínio verificado aqui depois
-      to: email,
+      to: 1jonassoaresjunior1@gmail.com,
       subject: 'Bem-vindo ao Linkei!',
       html: '<p>Obrigado por se cadastrar no <strong>Linkei</strong>!</p>'
     });
@@ -21,4 +21,5 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
+
 }
