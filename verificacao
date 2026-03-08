@@ -1,0 +1,21 @@
+const btnVerificar = document.getElementById('verificar');
+const inputs = document.querySelectorAll('.codigo-digito');
+
+btnVerificar.addEventListener('click', async () => {
+    let codigoDigitado = "";
+    inputs.forEach(input => codigoDigitado += input.value);
+    const email = localStorage.getItem('email_usuario');
+
+    const response = await fetch('/api/verificar-codigo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, codigoDigitado })
+    });
+
+    if (response.ok) {
+        localStorage.removeItem('email_usuario');
+        window.location.href = '/dashboard.html';
+    } else {
+        alert("Código incorreto ou expirado!");
+    }
+});
