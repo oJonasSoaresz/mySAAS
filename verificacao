@@ -1,5 +1,16 @@
-const btnVerificar = document.getElementById('verificar');
+// 1. Lógica para pular campos automaticamente
 const inputs = document.querySelectorAll('.codigo-digito');
+
+inputs.forEach((input, index) => {
+    input.addEventListener('input', (e) => {
+        if (e.target.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+        }
+    });
+});
+
+// 2. Lógica para enviar e verificar
+const btnVerificar = document.getElementById('verificar');
 
 btnVerificar.addEventListener('click', async () => {
     let codigoDigitado = "";
