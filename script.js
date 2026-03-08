@@ -2,33 +2,28 @@ const form = document.getElementById('cadastrar');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
     const email = document.getElementById('email').value;
     const btn = document.getElementById('continuar');
 
-    // Feedback visual básico
     btn.innerText = 'Enviando...';
     btn.disabled = true;
 
     try {
-        const response = await fetch('enviar-email', {
+        const response = await fetch('/api/enviar-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email })
         });
 
-        const result = await response.json();
-
         if (response.ok) {
-            alert('Sucesso! Verifique seu e-mail.');
+            alert('Código enviado! Verifique sua caixa de entrada.');
         } else {
-            alert('Erro: ' + result.error);
+            alert('Erro ao enviar. Verifique se o e-mail é o mesmo da sua conta Resend.');
         }
     } catch (err) {
-        alert('Erro na conexão com o servidor.');
+        alert('Erro de conexão.');
     } finally {
         btn.innerText = 'CONTINUAR';
         btn.disabled = false;
     }
-
 });
