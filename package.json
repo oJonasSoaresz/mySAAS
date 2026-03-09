@@ -1,7 +1,9 @@
 {
   "name": "meu-saas",
   "version": "1.0.0",
+  "type": "module", 
   "dependencies": {
-    "resend": "latest"
+    "resend": "^x.x.x",
+    "mongodb": "^x.x.x"
   }
 }
