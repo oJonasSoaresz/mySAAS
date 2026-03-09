@@ -1,5 +1,5 @@
-const { Resend } = require('resend');
-const { MongoClient } = require('mongodb');
+import { Resend } from 'resend';
+import { MongoClient } from 'mongodb';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const client = new MongoClient(process.env.MONGODB_URI);
@@ -41,3 +41,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: error.message });
   }
 }
+
